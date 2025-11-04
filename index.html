@@ -9,14 +9,23 @@
 <body>
     <div class="container">
         <h1>Generador de Certificados</h1>
-        <form id="student-form">
-            <label for="student-code">Código de Estudiante:</label>
-            <input type="text" id="student-code" required>
-            <button type="submit">Generar Certificado</button>
+        <form id="search-form">
+            <label for="dni-input">Ingrese su DNI o Código de Estudiante:</label>
+            <input type="text" id="dni-input" placeholder="DNI o Código" required>
+            <button type="submit">Buscar y Descargar</button>
         </form>
-        <div id="message"></div>
+
+        <!-- Modal para mostrar el resultado -->
+        <div id="result-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="student-name"></p>
+                <a id="download-link" href="#" target="_blank">Descargar Certificado</a>
+            </div>
+        </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
